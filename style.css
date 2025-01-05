@@ -217,57 +217,19 @@ select.dark-mode:focus {
    background: none;
    border: none;
    cursor: pointer;
-   font-size: 24px;
+   font-size: 28px; /* Increased for better visibility */
    padding: 0;
    line-height: 1;
+    transition: transform 0.2s ease; /* Added transition for smooth effect */
+}
+#darkModeToggle:hover{
+  transform: scale(1.1); /* Added scale on hover */
 }
 #settings-area {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.dark-mode-toggle {
-  display: flex;
-  align-items: center;
-    margin-bottom: 10px;
-}
-
-.dark-mode-toggle input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 40px;
-    height: 20px;
-    background-color: #ddd;
-    border-radius: 10px;
-    position: relative;
-    cursor: pointer;
-   transition: background-color 0.3s ease;
-   outline: none;
-}
-
-.dark-mode-toggle input[type="checkbox"]:checked {
-    background-color: #677fff;
-}
-
-.dark-mode-toggle input[type="checkbox"]::before {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background-color: white;
-    border-radius: 50%;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.3s ease;
-}
-.dark-mode-toggle input[type="checkbox"]:checked::before {
- transform: translateX(20px);
-}
-.dark-mode-toggle label{
-    margin-left: 5px;
-}
-
 /* Visually hidden element */
 .visually-hidden {
   position: absolute;
